@@ -3,21 +3,18 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from "re
 
 
 
-class Menu extends Component {
 
 
-    constructor(props) {
-        super (props);
 
-        this.state = {
-           selectedDish: null
-        }
-    }
+ class Menu extends Component {
 
-    onDishSelect(dish) {
-        this.setState({ selectedDish: dish });
-    }
+     constructor(props) {
+    super (props);
 
+    this.state = {
+      dishes: DISHES,
+    };
+  }
     renderDish(dish) {
         if (dish != null) {
             return(
@@ -32,7 +29,7 @@ class Menu extends Component {
         }
         else {
             return(
-                <div> Have a Good day!</div>
+                <div></div>
             );
         }
     }
@@ -41,12 +38,11 @@ class Menu extends Component {
 
         const Menu = this.props.dishes.map((dish) => {
             return (
-                <div key={dish.id} className="col-12 col-md-5 m-1" >
-                    <Card onClick={() => this.onDishSelect(dish) }  >
+                <div className="col-12 col-md-5 m-1" >
+                    <Card key={dish.id} onClick={() => this.props.onClick(dish.id)}>
                         <CardImg width="100%" src={dish.image} alt={dish.name} />
-                        <CardImgOverlay>
+                        <CardImgOverlay body className='ml-5'>
                             <CardTitle>{dish.name}</CardTitle>
-                            
                         </CardImgOverlay>
                     </Card>
                 </div>
@@ -55,11 +51,8 @@ class Menu extends Component {
 
         return (
             <div className="container">
-                <div className="row" >                   
-                    { Menu }
-                </div>
-                <div className="row">
-                    {this.renderDish(this.state.selectedDish)}
+                <div className="row" >
+                    { Menu } {                        }
                 </div>
             </div>
         );
