@@ -37,6 +37,7 @@ class DishDetail extends Component {
                             day: '2-digit'
                         }).format(new Date(Date.parse(comment.date)))}
                         </p>
+                        <p>{ comment.comment }</p>
                     </li>
                 )
             })
