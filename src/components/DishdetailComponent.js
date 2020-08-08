@@ -61,6 +61,8 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap"
                     <div className='row' >
                         <div className='col-md-5 col-sm-12 m-1' >
                             <RenderDish dish={props.dish} />
+                        </div>
+                        <div className='col-md-5 col-sm-12 m-1' >
                             <RenderComments comments={props.comments} />
                         </div>
                     </div>
