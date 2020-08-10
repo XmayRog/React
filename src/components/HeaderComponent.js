@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
-import { Navlink } from 'react-router-dom';
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron, NavLink } from 'reactstrap';
+import { } from 'react-router-dom';
 
 class Header extends Component {
     render() {
@@ -9,28 +9,28 @@ class Header extends Component {
                 <Navbar dark expand="md">
                     <div className='container'>
                         <NavbarBrand className='mr-auto' href="/">
-                            <img src="assets/logo.png" height="30" width="41" alt="Restaurante con fusión"/>
+                            <img src="assets/logo.png" height="30" width="41" alt="Restaurante con fusión" />
                         </NavbarBrand>
                         <Nav navbar >
                             <NavItem>
-                                <Navlink className="nav-link" to ="/home">
+                                <NavLink className="nav-link" to="/home">
                                     <span className="fa fa-home fa-lg "> Home </span>
-                                </Navlink>
+                                </NavLink>
                             </NavItem>
                             <NavItem>
-                                <Navlink className="nav-link" to ="/aboutus">
+                                <NavLink className="nav-link" to="/aboutus">
                                     <span className="fa fa-info fa-lg "> Aboutus </span>
-                                </Navlink>
+                                </NavLink>
                             </NavItem>
                             <NavItem>
-                                <Navlink className="nav-link" to ="/menu">
+                                <NavLink className="nav-link" to="/menu">
                                     <span className="fa fa-list fa-lg "> Menu </span>
-                                </Navlink>
+                                </NavLink>
                             </NavItem>
                             <NavItem>
-                                <Navlink className="nav-link" to ="/contactus">
+                                <NavLink className="nav-link" to="/contactus">
                                     <span className="fa fa-address-card fa-lg "> Contact Us </span>
-                                </Navlink>
+                                </NavLink>
                             </NavItem>
                         </Nav>
                     </div>
