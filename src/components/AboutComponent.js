@@ -2,20 +2,20 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function RenderLeader({ props }) {
+function RenderLeader({ leader }) {
     return (
         <Media>
             <Media left href="#">
-                <Media object data-src={props.leader.image} alt={props.leader.name} />
+                <Media object data-src={leader.image} alt={leader.name} />
             </Media>
             <Media body>
                 <Media heading>
-                    {props.leader.name}
+                    {leader.name}
                 </Media>
                 <Media middle>
-                    {props.leader.designation}
+                    {leader.designation}
                 </Media>
-                {props.leader.description}
+                {leader.description}
             </Media>
         </Media>
     );
