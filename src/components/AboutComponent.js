@@ -6,7 +6,7 @@ function RenderLeader({ leader }) {
     return (
         <Media>
             <Media left href="#">
-                <Media object data-src={leader.image} alt={leader.name} />
+                <img src={leader.image} alt={leader.name} />
             </Media>
             <Media body>
                 <Media heading>
@@ -94,4 +94,4 @@ function About(props) {
     );
 }
 
-export default About;    
+export default About;
