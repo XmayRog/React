@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Breadcrumb, BreadcrumbItem, Button, Form , FormFeedback, FormGroup , Label, Input, Col } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Form , FormFeedback, FormGroup , Label, Input, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Contact extends Component {
@@ -50,7 +50,7 @@ class Contact extends Component {
         });
     }
 
-    validate(firstname, lastname, email, telnum) {
+    validate(firstname, lastname, telnum, email ) {
         const errors = {
             firstname: '',
             lastname: '',
