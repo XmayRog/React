@@ -27,7 +27,6 @@ class CommentForm extends Component {
 
   handleSubmit(values) {
     this.toggleModal();
-    
   }
 
   render() {
@@ -170,7 +169,7 @@ const DishDetail = (props) => {
                         <BreadcrumbItem><Link to='/menu'>Menu</Link></BreadcrumbItem>
                         <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                     </Breadcrumb>
-                    <div className="col-12">
+                    <div className="col-12 col-md-5 m-1">
                         <h3>{props.dish.name}</h3>
                         <hr />
                     </div>
