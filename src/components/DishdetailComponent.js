@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbIte
 import { Link } from "react-router-dom";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { loading } from './LoadingComponent';
-
+import { baseUrl } from '../shared/baseUrl';
 const required = (value) => value && value.length;
 const maxLength = (len) => (value) => !(value) || (value.length <= len)
 const minLength = (len) => (value) => (value) && (value.length >= len)
@@ -120,13 +120,15 @@ class CommentForm extends Component {
 function RenderDish({ dish }) {
 
     return (
-        <Card>
-            <CardImg width="100%" src={dish.image} alt={dish.name} />
-            <CardBody>
-                <CardTitle>{dish.name}</CardTitle>
-                <CardText>{dish.description}</CardText>
-            </CardBody>
-        </Card>
+        <div className="col-12 col-md-5 m-1">
+            <Card>
+                <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
+                <CardBody>
+                    <CardTitle>{dish.name}</CardTitle>
+                    <CardText>{dish.description}</CardText>
+                </CardBody>
+            </Card>
+        </div>
     );
 }
 
